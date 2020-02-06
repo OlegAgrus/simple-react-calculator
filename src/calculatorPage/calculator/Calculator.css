@@ -1,0 +1,24 @@
+.calculator-body-input-group {
+    margin-top: 30px;
+    justify-content: center;
+    display: flex;
+}
+
+.calculator-body-input-group > div {
+    display: inline-block;
+}
+
+.calculator-operand {
+    width: 200px;
+}
+
+.calculator-operator {
+    width: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.calculator-body-button-container {
+    justify-content: center;
+    display: flex;
+}
