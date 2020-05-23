@@ -47,7 +47,7 @@ export class Calculator extends React.Component{
     };
 
     operatorInputFilter = (value) => {
-        return /^[+/%@]?$/.test(value);
+        return /^[+/%@*-^]?$/.test(value);
     };
 
     setInputFilter = (textbox, inputFilter) => {
@@ -86,6 +86,15 @@ export class Calculator extends React.Component{
                 break;
             case '%':
                 result = operand1 + " % " + operand2 + " = " + (operand1 % operand2);
+                break;
+            case '*':
+                result = operand1 + " * " + operand2 + " = " + (operand1 * operand2);
+                break;
+            case '-':
+                result = operand1 + " - " + operand2 + " = " + (operand1 - operand2);
+                break;
+            case '^':
+                result = operand1 + " ^ " + operand2 + " = " + (Math.pow(operand1, operand2));
                 break;
             case '@':
                 result = operand1 + " @ " + operand2 + " = " + (this.getHighestPrimeBetweenTwoNumbers(operand1, operand2));
